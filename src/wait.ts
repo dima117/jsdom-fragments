@@ -2,6 +2,12 @@ import { waitFor } from '@testing-library/dom';
 import { getElement } from './queries';
 import { BaseFragment } from './BaseFragment';
 
+/**
+ * Дождаться появляния в заданном контейнере элемента, соответствующего заданному селектору
+ * @param selector
+ * @param container 
+ * @returns Возвращает найденный элемент
+ */
 export const waitForElement = async (
     selector: string,
     container: Element = document.body
