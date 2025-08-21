@@ -8,6 +8,8 @@ import {
 } from './queries';
 import { getText } from './utils';
 
+type FragmentConstructor<T extends BaseFragment> = new (container: Element) => T;
+
 export class BaseFragment {
     constructor(protected container: Element) {}
 
@@ -34,23 +36,20 @@ export class BaseFragment {
         return Boolean(this.findElement(selector));
     }
 
-    protected get<T extends BaseFragment>(c: new (container: Element) => T, selector: string): T {
+    protected get<T extends BaseFragment>(c: FragmentConstructor<T>, selector: string): T {
         const el = selector ? this.getElement(selector) : this.container;
         return new c(el);
     }
 
     protected find<T extends BaseFragment>(
-        c: new (container: Element) => T,
+        c: FragmentConstructor<T>,
         selector: string
     ): T | undefined {
         const el = selector ? this.findElement(selector) : this.container;
         return el && new c(el);
     }
 
-    protected getAll<T extends BaseFragment>(
-        c: new (container: Element) => T,
-        selector: string
-    ): T[] {
+    protected getAll<T extends BaseFragment>(c: FragmentConstructor<T>, selector: string): T[] {
         return getAllElements(selector, this.container).map((el) => new c(el));
     }
 
