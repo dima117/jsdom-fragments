@@ -1,0 +1,6 @@
+{
+    "router": "module",
+    "plugin": ["typedoc-plugin-markdown"],
+    "out": "./docs",
+    "lang": "ru"
+}

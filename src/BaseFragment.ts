@@ -8,7 +8,7 @@ import {
 } from './queries';
 import { getText } from './utils';
 
-type FragmentConstructor<T extends BaseFragment> = new (container: Element) => T;
+export type FragmentConstructor<T extends BaseFragment> = new (container: Element) => T;
 
 export class BaseFragment {
     constructor(protected container: Element) {}
