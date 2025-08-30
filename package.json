@@ -10,7 +10,7 @@
         "clean": "tsc --build --clean",
         "version-beta": "npm version prerelease --preid beta",
         "publish-beta": "npm publish --tag beta",
-        "docs": "typedoc --cleanOutputDir --includeHierarchySummary"
+        "docs": "typedoc --cleanOutputDir"
     },
     "author": "dima117a@gmail.com",
     "license": "MIT",

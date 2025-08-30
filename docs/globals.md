@@ -8,21 +8,23 @@
 
 ### BaseFragment
 
-Defined in: [BaseFragment.ts:13](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L13)
+Defined in: [BaseFragment.ts:13](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L13)
 
 #### Constructors
 
 ##### Constructor
 
-> **new BaseFragment**(`container`): [`BaseFragment`](#basefragment)
+```ts
+new BaseFragment(container): BaseFragment;
+```
 
-Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L14)
+Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L14)
 
 ###### Parameters
 
-###### container
-
-`Element`
+| Parameter | Type |
+| ------ | ------ |
+| `container` | `Element` |
 
 ###### Returns
 
@@ -32,9 +34,11 @@ Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob
 
 ##### container
 
-> `protected` **container**: `Element`
+```ts
+protected container: Element;
+```
 
-Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L14)
+Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L14)
 
 #### Accessors
 
@@ -42,9 +46,11 @@ Defined in: [BaseFragment.ts:14](https://github.com/dima117/jsdom-fragments/blob
 
 ###### Get Signature
 
-> **get** **text**(): `string`
+```ts
+get text(): string;
+```
 
-Defined in: [BaseFragment.ts:61](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L61)
+Defined in: [BaseFragment.ts:61](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L61)
 
 ###### Returns
 
@@ -52,147 +58,19 @@ Defined in: [BaseFragment.ts:61](https://github.com/dima117/jsdom-fragments/blob
 
 #### Methods
 
-##### click()
-
-> **click**(): `Promise`\<`void`\>
-
-Defined in: [BaseFragment.ts:65](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L65)
-
-###### Returns
-
-`Promise`\<`void`\>
-
-##### find()
-
-> `protected` **find**\<`T`\>(`c`, `selector`): `undefined` \| `T`
-
-Defined in: [BaseFragment.ts:44](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L44)
-
-###### Type Parameters
-
-###### T
-
-`T` *extends* [`BaseFragment`](#basefragment)
-
-###### Parameters
-
-###### c
-
-[`FragmentConstructor`](#fragmentconstructor)\<`T`\>
-
-###### selector
-
-`string`
-
-###### Returns
-
-`undefined` \| `T`
-
-##### findElement()
-
-> `protected` **findElement**(`selector`): `undefined` \| `Element`
-
-Defined in: [BaseFragment.ts:24](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L24)
-
-###### Parameters
-
-###### selector
-
-`string`
-
-###### Returns
-
-`undefined` \| `Element`
-
-##### findTypedElement()
-
-> `protected` **findTypedElement**\<`T`\>(`ctr`, `selector`): `undefined` \| `T`
-
-Defined in: [BaseFragment.ts:28](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L28)
-
-###### Type Parameters
-
-###### T
-
-`T` *extends* `Element`
-
-###### Parameters
-
-###### ctr
-
-() => `T`
-
-###### selector
-
-`string`
-
-###### Returns
-
-`undefined` \| `T`
-
-##### get()
-
-> `protected` **get**\<`T`\>(`c`, `selector`): `T`
-
-Defined in: [BaseFragment.ts:39](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L39)
-
-###### Type Parameters
-
-###### T
-
-`T` *extends* [`BaseFragment`](#basefragment)
-
-###### Parameters
-
-###### c
-
-[`FragmentConstructor`](#fragmentconstructor)\<`T`\>
-
-###### selector
-
-`string`
-
-###### Returns
-
-`T`
-
-##### getAll()
-
-> `protected` **getAll**\<`T`\>(`c`, `selector`): `T`[]
-
-Defined in: [BaseFragment.ts:52](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L52)
-
-###### Type Parameters
-
-###### T
-
-`T` *extends* [`BaseFragment`](#basefragment)
-
-###### Parameters
-
-###### c
-
-[`FragmentConstructor`](#fragmentconstructor)\<`T`\>
-
-###### selector
-
-`string`
-
-###### Returns
-
-`T`[]
-
 ##### getElement()
 
-> `protected` **getElement**(`selector`): `Element`
+```ts
+protected getElement(selector): Element;
+```
 
-Defined in: [BaseFragment.ts:16](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L16)
+Defined in: [BaseFragment.ts:16](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L16)
 
 ###### Parameters
 
-###### selector
-
-`string`
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
 
 ###### Returns
 
@@ -200,81 +78,216 @@ Defined in: [BaseFragment.ts:16](https://github.com/dima117/jsdom-fragments/blob
 
 ##### getTypedElement()
 
-> `protected` **getTypedElement**\<`T`\>(`ctr`, `selector`): `T`
+```ts
+protected getTypedElement<T>(ctr, selector): T;
+```
 
-Defined in: [BaseFragment.ts:20](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L20)
+Defined in: [BaseFragment.ts:20](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L20)
 
 ###### Type Parameters
 
-###### T
-
-`T` *extends* `Element`
+| Type Parameter |
+| ------ |
+| `T` *extends* `Element` |
 
 ###### Parameters
 
-###### ctr
-
-() => `T`
-
-###### selector
-
-`string`
+| Parameter | Type |
+| ------ | ------ |
+| `ctr` | () => `T` |
+| `selector` | `string` |
 
 ###### Returns
 
 `T`
 
-##### has()
+##### findElement()
 
-> `protected` **has**(`selector`): `boolean`
+```ts
+protected findElement(selector): undefined | Element;
+```
 
-Defined in: [BaseFragment.ts:35](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L35)
+Defined in: [BaseFragment.ts:24](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L24)
 
 ###### Parameters
 
-###### selector
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
 
-`string`
+###### Returns
+
+`undefined` \| `Element`
+
+##### findTypedElement()
+
+```ts
+protected findTypedElement<T>(ctr, selector): undefined | T;
+```
+
+Defined in: [BaseFragment.ts:28](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L28)
+
+###### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* `Element` |
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `ctr` | () => `T` |
+| `selector` | `string` |
+
+###### Returns
+
+`undefined` \| `T`
+
+##### has()
+
+```ts
+protected has(selector): boolean;
+```
+
+Defined in: [BaseFragment.ts:35](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L35)
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
 
 ###### Returns
 
 `boolean`
 
-##### textFromSelector()
+##### get()
 
-> `protected` **textFromSelector**(`selector`): `string`
+```ts
+protected get<T>(c, selector): T;
+```
 
-Defined in: [BaseFragment.ts:56](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L56)
+Defined in: [BaseFragment.ts:39](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L39)
+
+###### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* [`BaseFragment`](#basefragment) |
 
 ###### Parameters
 
-###### selector
+| Parameter | Type |
+| ------ | ------ |
+| `c` | [`FragmentConstructor`](#fragmentconstructor)\<`T`\> |
+| `selector` | `string` |
 
-`string`
+###### Returns
+
+`T`
+
+##### find()
+
+```ts
+protected find<T>(c, selector): undefined | T;
+```
+
+Defined in: [BaseFragment.ts:44](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L44)
+
+###### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* [`BaseFragment`](#basefragment) |
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `c` | [`FragmentConstructor`](#fragmentconstructor)\<`T`\> |
+| `selector` | `string` |
+
+###### Returns
+
+`undefined` \| `T`
+
+##### getAll()
+
+```ts
+protected getAll<T>(c, selector): T[];
+```
+
+Defined in: [BaseFragment.ts:52](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L52)
+
+###### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* [`BaseFragment`](#basefragment) |
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `c` | [`FragmentConstructor`](#fragmentconstructor)\<`T`\> |
+| `selector` | `string` |
+
+###### Returns
+
+`T`[]
+
+##### textFromSelector()
+
+```ts
+protected textFromSelector(selector): string;
+```
+
+Defined in: [BaseFragment.ts:56](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L56)
+
+###### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
 
 ###### Returns
 
 `string`
 
+##### click()
+
+```ts
+click(): Promise<void>;
+```
+
+Defined in: [BaseFragment.ts:65](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L65)
+
+###### Returns
+
+`Promise`\<`void`\>
+
 ## Type Aliases
 
 ### FragmentConstructor()\<T\>
 
-> **FragmentConstructor**\<`T`\> = (`container`) => `T`
+```ts
+type FragmentConstructor<T> = (container) => T;
+```
 
-Defined in: [BaseFragment.ts:11](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/BaseFragment.ts#L11)
+Defined in: [BaseFragment.ts:11](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/BaseFragment.ts#L11)
 
 #### Type Parameters
 
-##### T
-
-`T` *extends* [`BaseFragment`](#basefragment)
+| Type Parameter |
+| ------ |
+| `T` *extends* [`BaseFragment`](#basefragment) |
 
 #### Parameters
 
-##### container
-
-`Element`
+| Parameter | Type |
+| ------ | ------ |
+| `container` | `Element` |
 
 #### Returns
 
@@ -282,169 +295,20 @@ Defined in: [BaseFragment.ts:11](https://github.com/dima117/jsdom-fragments/blob
 
 ## Functions
 
-### castElement()
-
-> **castElement**\<`T`\>(`ctr`, `el`): `T`
-
-Defined in: [utils.ts:15](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/utils.ts#L15)
-
-#### Type Parameters
-
-##### T
-
-`T` *extends* `Element`
-
-#### Parameters
-
-##### ctr
-
-() => `T`
-
-##### el
-
-`Element`
-
-#### Returns
-
-`T`
-
-***
-
-### compareString()
-
-> **compareString**(`input`, `str`): `boolean`
-
-Defined in: [utils.ts:9](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/utils.ts#L9)
-
-#### Parameters
-
-##### input
-
-`undefined` | `null` | `string`
-
-##### str
-
-`string` | `RegExp`
-
-#### Returns
-
-`boolean`
-
-***
-
-### elementIsInTheDocument()
-
-> **elementIsInTheDocument**(`e`): `boolean`
-
-Defined in: [utils.ts:23](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/utils.ts#L23)
-
-#### Parameters
-
-##### e
-
-`Element`
-
-#### Returns
-
-`boolean`
-
-***
-
-### findElement()
-
-> **findElement**(`selector`, `container`, `text?`): `undefined` \| `Element`
-
-Defined in: [queries.ts:33](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L33)
-
-#### Parameters
-
-##### selector
-
-`string`
-
-##### container
-
-`Element`
-
-##### text?
-
-`string` | `RegExp`
-
-#### Returns
-
-`undefined` \| `Element`
-
-***
-
-### findElementGlobally()
-
-> **findElementGlobally**(`selector`, `container`): `undefined` \| `Element`
-
-Defined in: [queries.ts:51](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L51)
-
-#### Parameters
-
-##### selector
-
-`string`
-
-##### container
-
-`Element` = `document.body`
-
-#### Returns
-
-`undefined` \| `Element`
-
-***
-
-### findTypedElement()
-
-> **findTypedElement**\<`T`\>(`ctr`, `selector`, `container`): `undefined` \| `T`
-
-Defined in: [queries.ts:58](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L58)
-
-#### Type Parameters
-
-##### T
-
-`T` *extends* `Element`
-
-#### Parameters
-
-##### ctr
-
-() => `T`
-
-##### selector
-
-`string`
-
-##### container
-
-`Element`
-
-#### Returns
-
-`undefined` \| `T`
-
-***
-
 ### getAllElements()
 
-> **getAllElements**(`selector`, `container`): `Element`[]
+```ts
+function getAllElements(selector, container): Element[];
+```
 
-Defined in: [queries.ts:3](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L3)
+Defined in: [queries.ts:3](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L3)
 
 #### Parameters
 
-##### selector
-
-`string`
-
-##### container
-
-`Element`
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
+| `container` | `Element` |
 
 #### Returns
 
@@ -454,19 +318,18 @@ Defined in: [queries.ts:3](https://github.com/dima117/jsdom-fragments/blob/aede3
 
 ### getElement()
 
-> **getElement**(`selector`, `container`): `Element`
+```ts
+function getElement(selector, container): Element;
+```
 
-Defined in: [queries.ts:7](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L7)
+Defined in: [queries.ts:7](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L7)
 
 #### Parameters
 
-##### selector
-
-`string`
-
-##### container
-
-`Element`
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
+| `container` | `Element` |
 
 #### Returns
 
@@ -476,69 +339,49 @@ Defined in: [queries.ts:7](https://github.com/dima117/jsdom-fragments/blob/aede3
 
 ### getElementGlobally()
 
-> **getElementGlobally**(`selector`, `container`): `Element`
+```ts
+function getElementGlobally(selector, container): Element;
+```
 
-Defined in: [queries.ts:16](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L16)
+Defined in: [queries.ts:16](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L16)
 
 #### Parameters
 
-##### selector
-
-`string`
-
-##### container
-
-`Element` = `document.body`
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
+| `container` | `Element` |
 
 #### Returns
 
 `Element`
-
-***
-
-### getText()
-
-> **getText**(`__namedParameters`): `string`
-
-Defined in: [utils.ts:5](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/utils.ts#L5)
-
-#### Parameters
-
-##### \_\_namedParameters
-
-`Element`
-
-#### Returns
-
-`string`
 
 ***
 
 ### getTypedElement()
 
-> **getTypedElement**\<`T`\>(`ctr`, `selector`, `container`): `T`
+```ts
+function getTypedElement<T>(
+   ctr, 
+   selector, 
+   container): T;
+```
 
-Defined in: [queries.ts:23](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/queries.ts#L23)
+Defined in: [queries.ts:23](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L23)
 
 #### Type Parameters
 
-##### T
-
-`T` *extends* `Element`
+| Type Parameter |
+| ------ |
+| `T` *extends* `Element` |
 
 #### Parameters
 
-##### ctr
-
-() => `T`
-
-##### selector
-
-`string`
-
-##### container
-
-`Element`
+| Parameter | Type |
+| ------ | ------ |
+| `ctr` | () => `T` |
+| `selector` | `string` |
+| `container` | `Element` |
 
 #### Returns
 
@@ -546,17 +389,123 @@ Defined in: [queries.ts:23](https://github.com/dima117/jsdom-fragments/blob/aede
 
 ***
 
-### normalizeText()
+### findElement()
 
-> **normalizeText**(`text?`): `string`
+```ts
+function findElement(
+   selector, 
+   container, 
+   text?): undefined | Element;
+```
 
-Defined in: [utils.ts:1](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/utils.ts#L1)
+Defined in: [queries.ts:33](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L33)
 
 #### Parameters
 
-##### text?
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
+| `container` | `Element` |
+| `text?` | `string` \| `RegExp` |
 
-`null` | `string`
+#### Returns
+
+`undefined` \| `Element`
+
+***
+
+### findElementGlobally()
+
+```ts
+function findElementGlobally(selector, container): undefined | Element;
+```
+
+Defined in: [queries.ts:51](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L51)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `selector` | `string` |
+| `container` | `Element` |
+
+#### Returns
+
+`undefined` \| `Element`
+
+***
+
+### findTypedElement()
+
+```ts
+function findTypedElement<T>(
+   ctr, 
+   selector, 
+   container): undefined | T;
+```
+
+Defined in: [queries.ts:58](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/queries.ts#L58)
+
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* `Element` |
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `ctr` | () => `T` |
+| `selector` | `string` |
+| `container` | `Element` |
+
+#### Returns
+
+`undefined` \| `T`
+
+***
+
+### normalizeText()
+
+```ts
+function normalizeText(text?): string;
+```
+
+Defined in: [utils.ts:9](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/utils.ts#L9)
+
+Нормализует заданный текст:
+- преобразует `null` и `undefined` в пустую строку
+- обрезает пустые символы по краям
+- заменяет неразрывные пробелы `&nbsp;` на обычные
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `text?` | `null` \| `string` | Строка, которую нужно преобразовать |
+
+#### Returns
+
+`string`
+
+Нормализованная строка
+
+***
+
+### getText()
+
+```ts
+function getText(__namedParameters): string;
+```
+
+Defined in: [utils.ts:13](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/utils.ts#L13)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `__namedParameters` | `Element` |
 
 #### Returns
 
@@ -564,54 +513,150 @@ Defined in: [utils.ts:1](https://github.com/dima117/jsdom-fragments/blob/aede349
 
 ***
 
-### waitForElement()
+### compareString()
 
-> **waitForElement**(`selector`, `container`): `Promise`\<`Element`\>
+```ts
+function compareString(input, str): boolean;
+```
 
-Defined in: [wait.ts:11](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/wait.ts#L11)
-
-Дождаться появляния в заданном контейнере элемента, соответствующего заданному селектору
+Defined in: [utils.ts:17](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/utils.ts#L17)
 
 #### Parameters
 
-##### selector
+| Parameter | Type |
+| ------ | ------ |
+| `input` | `undefined` \| `null` \| `string` |
+| `str` | `string` \| `RegExp` |
 
-`string`
+#### Returns
 
-##### container
+`boolean`
 
-`Element` = `document.body`
+***
+
+### castElement()
+
+```ts
+function castElement<T>(ctr, el): T;
+```
+
+Defined in: [utils.ts:23](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/utils.ts#L23)
+
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` *extends* `Element` |
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `ctr` | () => `T` |
+| `el` | `Element` |
+
+#### Returns
+
+`T`
+
+***
+
+### elementIsInTheDocument()
+
+```ts
+function elementIsInTheDocument(e): boolean;
+```
+
+Defined in: [utils.ts:31](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/utils.ts#L31)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `e` | `Element` |
+
+#### Returns
+
+`boolean`
+
+## Ожидание появления элементов
+
+### waitForElement()
+
+```ts
+function waitForElement(
+   selector, 
+   container, 
+options?): Promise<Element>;
+```
+
+Defined in: [wait.ts:15](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/wait.ts#L15)
+
+Дождаться появляния заданного DOM элемента. Внутри используется хелпер [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library, который в течение заданного времени с заданным интервалом проверяет выполнение условия (наличие заданного элемента). Если элемент не появится в течение заданного времени, то будет сгенерировано исключение.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `selector` | `string` | Селектор, задающий нужный элемент |
+| `container` | `Element` | Контейнер, в котором производить поиска элемента. Значение по умолчанию `document.body` |
+| `options?` | `waitForOptions` | Параметры ожидания — аналогичны параметрам хелпера [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library |
 
 #### Returns
 
 `Promise`\<`Element`\>
 
-Возвращает найденный элемент
+Асинхронно возвращает найденный элемент
+
+#### Example
+
+```ts
+const button: Element = await waitForElement('.SaveButton')
+```
 
 ***
 
 ### waitForFragment()
 
-> **waitForFragment**\<`T`\>(`c`, `selector`): `Promise`\<`T`\>
+```ts
+function waitForFragment<T>(
+   ctr, 
+   selector, 
+   container, 
+options?): Promise<T>;
+```
 
-Defined in: [wait.ts:18](https://github.com/dima117/jsdom-fragments/blob/aede349c0fa486db6d87169b278f2c666a7c00e4/src/wait.ts#L18)
+Defined in: [wait.ts:39](https://github.com/dima117/jsdom-fragments/blob/7a7afd61843b414ed019659ec1e018701f471ac7/src/wait.ts#L39)
+
+Дождаться появляния DOM элемента и создать на его основе фрагмент базового типа. Работает аналогично [waitForElement](#waitforelement).
 
 #### Type Parameters
 
-##### T
-
-`T` *extends* [`BaseFragment`](#basefragment)
+| Type Parameter | Description |
+| ------ | ------ |
+| `T` *extends* [`BaseFragment`](#basefragment) | Тип фрагмента, который нужно создать |
 
 #### Parameters
 
-##### c
-
-(`container`) => `T`
-
-##### selector
-
-`string`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `ctr` | [`FragmentConstructor`](#fragmentconstructor)\<`T`\> | Конструктор фрагмента заданного типа |
+| `selector` | `string` | Селектор, задающий нужный элемент |
+| `container` | `Element` | Контейнер, в котором производить поиска элемента. Значение по умолчанию `document.body` |
+| `options?` | `waitForOptions` | Параметры ожидания — аналогичны параметрам метода [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library |
 
 #### Returns
 
 `Promise`\<`T`\>
+
+Асинхронно возвращает созданный фрагмент
+
+#### Example
+
+```ts
+class ButtonFragment extends BaseFragment {
+   // ...
+}
+
+const button: ButtonFragment = await waitForFragment(ButtonFragment, '.SaveButton')
+```

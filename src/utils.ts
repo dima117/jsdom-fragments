@@ -1,3 +1,11 @@
+/**
+ * Нормализует заданный текст:
+ * - преобразует `null` и `undefined` в пустую строку
+ * - обрезает пустые символы по краям
+ * - заменяет неразрывные пробелы `&nbsp;` на обычные
+ * @param text Строка, которую нужно преобразовать
+ * @returns Нормализованная строка
+ */
 export const normalizeText = (text?: string | null): string => {
     return text === null || text === undefined ? '' : text.replace(/\u00a0/g, ' ').trim();
 };

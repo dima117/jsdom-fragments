@@ -2,5 +2,15 @@
     "router": "module",
     "plugin": ["typedoc-plugin-markdown"],
     "out": "./docs",
-    "lang": "ru"
+    "useCodeBlocks": true,
+    "parametersFormat": "table",
+    "sort": [
+        "kind",
+        "source-order",
+        "instance-first",
+        "alphabetical-ignoring-documents"
+    ],
+    "tableColumnSettings": {
+        "hideDefaults": true
+    }
 }
