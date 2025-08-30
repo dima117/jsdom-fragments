@@ -10,7 +10,7 @@ import { BaseFragment, FragmentConstructor } from './BaseFragment';
  * @returns Асинхронно возвращает найденный элемент
  * @example
  * const button: Element = await waitForElement('.SaveButton')
- * @group Ожидание появления элементов
+ * @category Ожидание появления элементов
  */
 export const waitForElement = async (
     selector: string,
@@ -34,7 +34,7 @@ export const waitForElement = async (
  * }
  * 
  * const button: ButtonFragment = await waitForFragment(ButtonFragment, '.SaveButton')
- * @group Ожидание появления элементов
+ * @category Ожидание появления элементов
  */
 export const waitForFragment = async <T extends BaseFragment>(
     ctr: FragmentConstructor<T>,

@@ -7,10 +7,13 @@
     "sort": [
         "kind",
         "source-order",
-        "instance-first",
-        "alphabetical-ignoring-documents"
+        "instance-first"
     ],
     "tableColumnSettings": {
         "hideDefaults": true
-    }
+    },
+    "categoryOrder": [
+        "Ожидание появления элементов",
+        "Вспомогательные функции",
+    ]
 }
