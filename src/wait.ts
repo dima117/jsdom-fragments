@@ -27,7 +27,7 @@ export const waitForElement = async (
  * @param selector Селектор, задающий нужный элемент
  * @param container Контейнер, в котором производить поиска элемента. Значение по умолчанию `document.body`
  * @param options Параметры ожидания — аналогичны параметрам метода [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library
-* @returns Асинхронно возвращает созданный фрагмент
+ * @returns Асинхронно возвращает созданный фрагмент
  * @example
  * class ButtonFragment extends BaseFragment {
  *    // ...

@@ -1,11 +1,16 @@
 {
-    "router": "module",
     "plugin": ["typedoc-plugin-markdown"],
+    "router": "module",
+    "readme": "none",
     "out": "./docs",
+    "entryFileName": "api",
+    "name": "Документация API jsdom-fragments",
+    "hidePageHeader": true,
     "useCodeBlocks": true,
     "parametersFormat": "table",
     "sort": [
         "kind",
+        "visibility",
         "source-order",
         "instance-first"
     ],
@@ -13,6 +18,7 @@
         "hideDefaults": true
     },
     "categoryOrder": [
+        "API фрагментов страниц",
         "Поиск элементов на странице",
         "Ожидание появления элементов",
         "Вспомогательные функции"

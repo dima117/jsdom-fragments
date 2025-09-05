@@ -98,7 +98,7 @@ export function findElementGlobally(selector: string, text?: string | RegExp): E
 
 /**
  * Найти опциональный элемент заданного типа. Если элемент не найден, то вернуть `undefined`
- * @typeParam T - Конкретный тип элемента
+ * @typeParam T Конкретный тип элемента
  * @param ctr Конструктор элемента конкретного типа
  * @param selector Селектор для поиска элемента
  * @param container Контейнер (родительский элемент), внутри которого нужно выполнить поиск
