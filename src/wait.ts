@@ -15,7 +15,7 @@ import { BaseFragment, FragmentConstructor } from './BaseFragment';
 export const waitForElement = async (
     selector: string,
     container: Element = document.body,
-    options?: waitForOptions,
+    options?: waitForOptions
 ): Promise<Element> => {
     return await waitFor(() => getElement(selector, container), options);
 };
@@ -27,12 +27,12 @@ export const waitForElement = async (
  * @param selector Селектор, задающий нужный элемент
  * @param container Контейнер, в котором производить поиска элемента. Значение по умолчанию `document.body`
  * @param options Параметры ожидания — аналогичны параметрам метода [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library
- * @returns Асинхронно возвращает созданный фрагмент
+* @returns Асинхронно возвращает созданный фрагмент
  * @example
  * class ButtonFragment extends BaseFragment {
  *    // ...
  * }
- * 
+ *
  * const button: ButtonFragment = await waitForFragment(ButtonFragment, '.SaveButton')
  * @category Ожидание появления элементов
  */
@@ -40,7 +40,7 @@ export const waitForFragment = async <T extends BaseFragment>(
     ctr: FragmentConstructor<T>,
     selector: string,
     container: Element = document.body,
-    options?: waitForOptions,
+    options?: waitForOptions
 ): Promise<T> => {
     const el = await waitForElement(selector, container, options);
     return new ctr(el);

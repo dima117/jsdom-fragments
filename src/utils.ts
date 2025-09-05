@@ -1,4 +1,3 @@
-
 /**
  * Нормализует заданный текст:
  * - преобразует `null` и `undefined` в пустую строку
@@ -14,7 +13,7 @@ export const normalizeText = (text: string | null | undefined): string => {
 
 /**
  * Возвращает нормализованный текст элемента
- * @param el Элемент, текст которого нужно получить 
+ * @param el Элемент, текст которого нужно получить
  * @returns Текст элемента из поля `textContent`, нормализованный с помощью {@link normalizeText}
  * @category Вспомогательные функции
  */
@@ -29,7 +28,10 @@ export const getText = ({ textContent }: Element): string => {
  * @returns Возвращает `true`, если нормализованная исходная строка равна ожидаемой строке или соответствует заданному регулярному выражению, иначе — `false`
  * @category Вспомогательные функции
  */
-export const compareString = (input: string | null | undefined, expected: string | RegExp): boolean => {
+export const compareString = (
+    input: string | null | undefined,
+    expected: string | RegExp
+): boolean => {
     input = normalizeText(input);
 
     return typeof expected === 'string' ? input === expected : expected.test(input);
@@ -61,8 +63,6 @@ export const castElement = <T extends Element>(ctr: new () => T, el: Element): T
  * @returns Возвращает `true`, если элемент находится внутри документа
  * @remarks
  * Логика работы аналогична методу [toBeInTheDocument](https://github.com/testing-library/jest-dom?tab=readme-ov-file#tobeinthedocument) из библиотеки [@testing-library/jest-dom](https://npmjs.com/package/@testing-library/jest-dom)
- * 
- * 
  * @category Вспомогательные функции
  */
 export const elementIsInTheDocument = (el: Element) =>
