@@ -1,0 +1,8 @@
+# ignore all
+**/*
+
+# override above and include dist
+!LICENSE
+!README.md
+!docs/**/*
+!dist/**/*
