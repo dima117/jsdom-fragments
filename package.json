@@ -3,19 +3,23 @@
     "version": "1.0.0",
     "main": "dist/index.js",
     "scripts": {
-        "test": "jest --passWithNoTests",
+        "test": "jest",
         "format": "prettier --write ./**/*.ts",
-        "build": "tsc --build tsconfig.json",
+        "build": "tsc --build tsconfig.publish.json",
         "prepare": "npm run clean;npm run build",
         "clean": "tsc --build --clean",
         "version-beta": "npm version prerelease --preid beta",
         "publish-beta": "npm publish --tag beta",
         "docs": "typedoc --cleanOutputDir",
-        "docs:watch": "typedoc --cleanOutputDir --watch"
+        "docs:watch": "typedoc --cleanOutputDir --watch",
+        "specs:validate": "npx spec-box validate",
+        "specs:sync": "npx spec-box sync"
     },
     "author": "dima117a@gmail.com",
     "license": "MIT",
     "devDependencies": {
+        "@spec-box/sync": "^1.2.0",
+        "@types/jest": "^30.0.0",
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",
         "prettier": "3.6.2",

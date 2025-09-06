@@ -1,0 +1,9 @@
+feature: Вспомогательные функции
+code: utils
+
+specs-unit:
+  normalizeText:
+    - assert: преобразует `null` в пустую строку
+    - assert: преобразует `undefined` в пустую строку
+    - assert: заменяет неразрывные пробелы `&nbsp;` на обычные
+    - assert: обрезает пустые символы по краям
