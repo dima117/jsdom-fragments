@@ -34,5 +34,13 @@
         "@testing-library/dom": "^10.4.1",
         "@testing-library/user-event": "^14.6.1",
         "jsdom": "^26.1.0"
+    },
+    "directories": {
+        "doc": "docs"
+    },
+    "homepage": "https://github.com/dima117/jsdom-fragments#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dima117/jsdom-fragments.git"
     }
 }
