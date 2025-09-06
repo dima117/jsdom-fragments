@@ -4,7 +4,7 @@
     "author": "dima117a@gmail.com",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dima117/jsdom-fragments.git"
+        "url": "https://github.com/dima117/jsdom-fragments"
     },
     "license": "MIT",
     "main": "dist/index.js",
