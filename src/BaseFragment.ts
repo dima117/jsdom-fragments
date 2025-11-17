@@ -22,11 +22,15 @@ export type FragmentConstructor<T extends BaseFragment> = new (container: Elemen
  * @category API фрагментов страниц
  */
 export class BaseFragment {
+    public get container() {
+        return this._container;
+    }
+
     /**
      * Создает экземпляр фрагмента
      * @param container Корневой элемент создаваемого фрагмента
      */
-    constructor(protected container: Element) {}
+    constructor(protected _container: Element) {}
 
     /**
      * Получить вложенный элемент
