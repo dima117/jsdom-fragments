@@ -4,7 +4,7 @@
 
 ### BaseFragment
 
-Defined in: [BaseFragment.ts:24](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L24)
+Defined in: [BaseFragment.ts:24](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L24)
 
 Базовый класс для фрагментов страниц. Предоставляет публичный API для базовых действий над элементами страниц (например, получение текста или клик по элементу), а также API для унаследованных классов, расширяющих поведение BaseFragment
 
@@ -16,7 +16,7 @@ Defined in: [BaseFragment.ts:24](https://github.com/dima117/jsdom-fragments/blob
 new BaseFragment(container): BaseFragment;
 ```
 
-Defined in: [BaseFragment.ts:29](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L29)
+Defined in: [BaseFragment.ts:38](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L38)
 
 Создает экземпляр фрагмента
 
@@ -32,17 +32,31 @@ Defined in: [BaseFragment.ts:29](https://github.com/dima117/jsdom-fragments/blob
 
 #### Properties
 
-##### container
+##### \_container
 
 ```ts
-protected container: Element;
+protected _container: Element;
 ```
 
-Defined in: [BaseFragment.ts:29](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L29)
-
-Корневой элемент создаваемого фрагмента
+Defined in: [BaseFragment.ts:25](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L25)
 
 #### Accessors
+
+##### container
+
+###### Get Signature
+
+```ts
+get container(): Element;
+```
+
+Defined in: [BaseFragment.ts:30](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L30)
+
+Корневой элемент
+
+###### Returns
+
+`Element`
 
 ##### text
 
@@ -52,7 +66,7 @@ Defined in: [BaseFragment.ts:29](https://github.com/dima117/jsdom-fragments/blob
 get text(): string;
 ```
 
-Defined in: [BaseFragment.ts:159](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L159)
+Defined in: [BaseFragment.ts:170](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L170)
 
 Получить текст из контейнера текущего фрагмента, нормализованный с помощью [normalizeText](#normalizetext)
 
@@ -72,7 +86,7 @@ Defined in: [BaseFragment.ts:159](https://github.com/dima117/jsdom-fragments/blo
 click(): Promise<void>;
 ```
 
-Defined in: [BaseFragment.ts:168](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L168)
+Defined in: [BaseFragment.ts:179](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L179)
 
 Кликнуть по контейнеру текущего фрагмента
 
@@ -92,7 +106,7 @@ Defined in: [BaseFragment.ts:168](https://github.com/dima117/jsdom-fragments/blo
 protected getElement(selector): Element;
 ```
 
-Defined in: [BaseFragment.ts:36](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L36)
+Defined in: [BaseFragment.ts:47](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L47)
 
 Получить вложенный элемент
 
@@ -114,7 +128,7 @@ Defined in: [BaseFragment.ts:36](https://github.com/dima117/jsdom-fragments/blob
 protected getTypedElement<T>(ctr, selector): T;
 ```
 
-Defined in: [BaseFragment.ts:47](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L47)
+Defined in: [BaseFragment.ts:58](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L58)
 
 Получить вложенный элемент заданного типа
 
@@ -143,7 +157,7 @@ Defined in: [BaseFragment.ts:47](https://github.com/dima117/jsdom-fragments/blob
 protected findElement(selector): undefined | Element;
 ```
 
-Defined in: [BaseFragment.ts:56](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L56)
+Defined in: [BaseFragment.ts:67](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L67)
 
 Найти опциональный вложенный элемент. Если элемент не найден, то возвращает `undefined`
 
@@ -165,7 +179,7 @@ Defined in: [BaseFragment.ts:56](https://github.com/dima117/jsdom-fragments/blob
 protected findTypedElement<T>(ctr, selector): undefined | T;
 ```
 
-Defined in: [BaseFragment.ts:67](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L67)
+Defined in: [BaseFragment.ts:78](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L78)
 
 Найти опциональный вложенный элемент заданного типа. Если элемент не найден, то вернуть `undefined`
 
@@ -194,7 +208,7 @@ Defined in: [BaseFragment.ts:67](https://github.com/dima117/jsdom-fragments/blob
 protected has(selector): boolean;
 ```
 
-Defined in: [BaseFragment.ts:79](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L79)
+Defined in: [BaseFragment.ts:90](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L90)
 
 Проверить, существует ли вложенный элемент, соответствующий заданному селектору
 
@@ -216,7 +230,7 @@ Defined in: [BaseFragment.ts:79](https://github.com/dima117/jsdom-fragments/blob
 protected get<T>(ctr, selector): T;
 ```
 
-Defined in: [BaseFragment.ts:96](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L96)
+Defined in: [BaseFragment.ts:107](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L107)
 
 Получить фрагмент заданного типа для существующего вложенного элемента
 
@@ -255,7 +269,7 @@ class FormFragment extends BaseFragment {
 protected find<T>(ctr, selector): undefined | T;
 ```
 
-Defined in: [BaseFragment.ts:114](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L114)
+Defined in: [BaseFragment.ts:125](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L125)
 
 Получить фрагмент заданного типа для опционального вложенного элемента. Если заданный элемент не найден, то будет возвращен `undefined`
 
@@ -294,7 +308,7 @@ class ListItemFragment extends BaseFragment {
 protected getAll<T>(ctr, selector): T[];
 ```
 
-Defined in: [BaseFragment.ts:135](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L135)
+Defined in: [BaseFragment.ts:146](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L146)
 
 Получить фрагменты заданного типа для всех элементов, соответствующих заданному селектору
 
@@ -333,7 +347,7 @@ class TableFragment extends BaseFragment {
 protected textFromSelector(selector): string;
 ```
 
-Defined in: [BaseFragment.ts:150](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L150)
+Defined in: [BaseFragment.ts:161](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L161)
 
 Получить текст вложенного элемента
 
@@ -367,7 +381,7 @@ class MyPageFragment extends BaseFragment {
 type FragmentConstructor<T> = (container) => T;
 ```
 
-Defined in: [BaseFragment.ts:18](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/BaseFragment.ts#L18)
+Defined in: [BaseFragment.ts:18](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/BaseFragment.ts#L18)
 
 Тип функции-конструктора фрагмента (экземпляра класса, унаследованного от [BaseFragment](#basefragment))
 
@@ -397,7 +411,7 @@ Defined in: [BaseFragment.ts:18](https://github.com/dima117/jsdom-fragments/blob
 function getAllElements(selector, container): Element[];
 ```
 
-Defined in: [queries.ts:10](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L10)
+Defined in: [queries.ts:10](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L10)
 
 Получить все элементы, соответствующие заданному селектору
 
@@ -422,7 +436,7 @@ Defined in: [queries.ts:10](https://github.com/dima117/jsdom-fragments/blob/56d5
 function getElement(selector, container): Element;
 ```
 
-Defined in: [queries.ts:21](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L21)
+Defined in: [queries.ts:21](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L21)
 
 Получить элемент, соответствующий заданному селектору. Если элемент не найден, то будет ошибка
 
@@ -447,7 +461,7 @@ Defined in: [queries.ts:21](https://github.com/dima117/jsdom-fragments/blob/56d5
 function getElementGlobally(selector): Element;
 ```
 
-Defined in: [queries.ts:36](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L36)
+Defined in: [queries.ts:36](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L36)
 
 Получить элемент, соответствующий заданному селектору. Работает аналогично функции [getElement](#getelement-2) с контейнером `document.body`
 
@@ -474,7 +488,7 @@ function getTypedElement<T>(
    container): T;
 ```
 
-Defined in: [queries.ts:52](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L52)
+Defined in: [queries.ts:52](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L52)
 
 Получить элемент заданного типа. Если элемент не найден в заданном контейнере или он не относится к заданному типу, то будет сгенерирована ошибка
 
@@ -516,7 +530,7 @@ function findElement(
    text?): undefined | Element;
 ```
 
-Defined in: [queries.ts:70](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L70)
+Defined in: [queries.ts:70](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L70)
 
 Найти опциональный элемент внутри заданного контейнера. Если элемент не найден, то вернуть `undefined`
 
@@ -542,7 +556,7 @@ Defined in: [queries.ts:70](https://github.com/dima117/jsdom-fragments/blob/56d5
 function findElementGlobally(selector, text?): undefined | Element;
 ```
 
-Defined in: [queries.ts:95](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L95)
+Defined in: [queries.ts:95](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L95)
 
 Найти опциональный элемент на странице. Если элемент не найден, то вернуть `undefined`
 
@@ -570,7 +584,7 @@ function findTypedElement<T>(
    container): undefined | T;
 ```
 
-Defined in: [queries.ts:113](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/queries.ts#L113)
+Defined in: [queries.ts:113](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/queries.ts#L113)
 
 Найти опциональный элемент заданного типа. Если элемент не найден, то вернуть `undefined`
 
@@ -614,7 +628,7 @@ function waitForElement(
 options?): Promise<Element>;
 ```
 
-Defined in: [wait.ts:15](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/wait.ts#L15)
+Defined in: [wait.ts:15](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/wait.ts#L15)
 
 Дождаться появляния заданного DOM элемента. Внутри используется хелпер [waitFor](https://testing-library.com/docs/dom-testing-library/api-async/#waitfor) из библиотеки Testing Library, который в течение заданного времени с заданным интервалом проверяет выполнение условия (наличие заданного элемента). Если элемент не появится в течение заданного времени, то будет сгенерировано исключение.
 
@@ -650,7 +664,7 @@ function waitForFragment<T>(
 options?): Promise<T>;
 ```
 
-Defined in: [wait.ts:39](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/wait.ts#L39)
+Defined in: [wait.ts:39](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/wait.ts#L39)
 
 Дождаться появляния DOM элемента и создать на его основе фрагмент базового типа. Работает аналогично [waitForElement](#waitforelement).
 
@@ -693,7 +707,7 @@ const button: ButtonFragment = await waitForFragment(ButtonFragment, '.SaveButto
 function normalizeText(text): string;
 ```
 
-Defined in: [utils.ts:10](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/utils.ts#L10)
+Defined in: [utils.ts:10](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/utils.ts#L10)
 
 Нормализует заданный текст:
 - преобразует `null` и `undefined` в пустую строку
@@ -720,7 +734,7 @@ Defined in: [utils.ts:10](https://github.com/dima117/jsdom-fragments/blob/56d546
 function getText(el): string;
 ```
 
-Defined in: [utils.ts:20](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/utils.ts#L20)
+Defined in: [utils.ts:20](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/utils.ts#L20)
 
 Возвращает нормализованный текст элемента
 
@@ -744,7 +758,7 @@ Defined in: [utils.ts:20](https://github.com/dima117/jsdom-fragments/blob/56d546
 function compareString(input, expected): boolean;
 ```
 
-Defined in: [utils.ts:31](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/utils.ts#L31)
+Defined in: [utils.ts:31](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/utils.ts#L31)
 
 Сравнивает строку с другой строкой или регулярным выражением, предварительно нормализовав её с помощью [normalizeText](#normalizetext)
 
@@ -769,7 +783,7 @@ Defined in: [utils.ts:31](https://github.com/dima117/jsdom-fragments/blob/56d546
 function castElement<T>(ctr, el): T;
 ```
 
-Defined in: [utils.ts:52](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/utils.ts#L52)
+Defined in: [utils.ts:52](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/utils.ts#L52)
 
 Приводит элемент типа `Element` к заданному конкретному типу
 
@@ -808,7 +822,7 @@ console.log(input.value)
 function elementIsInTheDocument(el): boolean;
 ```
 
-Defined in: [utils.ts:68](https://github.com/dima117/jsdom-fragments/blob/56d546cd22f40d900f617453cd4c15e59072b4cb/src/utils.ts#L68)
+Defined in: [utils.ts:68](https://github.com/dima117/jsdom-fragments/blob/b7b7280615b5852e45a336336864902ae822db0b/src/utils.ts#L68)
 
 Проверяет, находится ли заданный элемент в документе
 
